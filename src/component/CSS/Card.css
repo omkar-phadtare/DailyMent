@@ -1,0 +1,44 @@
+.del-btn{
+    cursor: pointer;
+}
+
+.del-btn:hover{
+    color: red;
+}
+
+.upd-btn{
+    cursor: pointer;
+}
+
+.upd-btn:hover{
+    color: skyblue;
+    text-shadow: 10px blue;
+}
+
+.bottom-card{
+    opacity: 0.7;
+    display: flex;
+    padding: 10px;
+}
+
+.bottom-card div{
+    padding: 10px;
+}
+
+.card-cont{
+    opacity: 0.8;
+}
+.head-title{
+    border: 1px solid black;
+    box-shadow: 10px;
+}
+
+.is-hidden{
+    display: none;
+    
+}
+
+.form-update{
+    z-index: 200;
+    display: flex;
+}

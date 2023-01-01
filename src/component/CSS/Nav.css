@@ -1,0 +1,28 @@
+.todo-brand{
+    width: 20px;
+}
+
+.t1{
+    color: rgb(231, 231, 5);
+}
+
+.t2{
+    color: orange;
+}
+
+.t3{
+    color: skyblue;
+}
+.log-sign{
+    display: flex;
+    right: 0;
+}
+
+.add-btn{
+    display: flex;
+    right: 0;
+}
+
+.is-hidden{
+    display: none;
+}

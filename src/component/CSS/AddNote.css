@@ -1,0 +1,18 @@
+.add-form{
+    visibility: hidden;
+}
+
+.add-btn:hover{
+    background-color: rgb(68, 68, 68);
+}
+
+
+.set-img:hover{
+  opacity: 0.8;
+  cursor: pointer; 
+}
+
+.selected-img{
+  opacity: 0.5;
+  border: 1px solid blue;
+}
