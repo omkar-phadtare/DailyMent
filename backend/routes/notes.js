@@ -29,7 +29,6 @@ fetchUser ,
 
         const {title,description,tag,background} = req.body;
 
-        console.log(background)
         const error = await validationResult(req)
 
     if(!error.isEmpty())

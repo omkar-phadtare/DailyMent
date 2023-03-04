@@ -136,7 +136,6 @@ router.post('/getuser', fetchUser,async (req, res) => {
         try {
             userId = req.user.id;
 
-            console.log(userId);
 
             const userD = await userData.findById(userId).select("-password");
             res.send(userD);
@@ -166,7 +165,6 @@ router.get('/user', (req, res) => {
 
 
 router.get('/jwtID',async (req,res)=>{
-    console.log(process.env.JWT_TOKEN)
     const data =await userData.find();
 
     res.json(data);

@@ -12,10 +12,14 @@ const express = require('express');
 const app = express();
 const port = 5000;
 const connectMongo = require('./dbConnection');
+
 const mongoose = require('mongoose');
 var cors = require('cors');
 
-connectMongo();
+require('dotenv').config();
+
+const t = connectMongo();
+
 
 app.use(cors());
 app.use(express.json());
@@ -24,6 +28,13 @@ app.use('/api/auth' ,require('./routes/auth'));
 app.use('/api/notes',require('./routes/notes'));
 app.use('/api/register',require('./routes/register'));
 app.use('/api/v1/work',require('./routes/WorkerAuth'));
+
+if (process.env.NODE_ENV === 'production') {
+    //*Set static folder up in production
+    app.use(express.static('client/build'));
+
+    app.get('*', (req,res) => res.sendFile(path.resolve(__dirname, 'client', 'build','index.html')));
+  }
 
 app.listen(port,function(){
     
