@@ -17,7 +17,7 @@ const AuthState = (props)=>{
 
     //FETCH ALL NOTES
     const fetchAllNotes=async()=>{
-        const allnotes = await fetch("http://localhost:5000/api/notes/fetchallnotes",
+        const allnotes = await fetch("https://node-test-h2n4.onrender.com/api/notes/fetchallnotes",
         {
             method:"GET",
             headers:{
@@ -39,7 +39,7 @@ const AuthState = (props)=>{
 //DELETE NOTE AS PER USER
 const deleteNotes = async(noteId)=>{
     console.log(noteId);
-    const deleteOne = await fetch(`http://localhost:5000/api/notes/deletenotes/${noteId}`,
+    const deleteOne = await fetch(`https://node-test-h2n4.onrender.com/api/notes/deletenotes/${noteId}`,
     {
         method:"DELETE",
         headers:{
@@ -64,7 +64,7 @@ const deleteNotes = async(noteId)=>{
             background:background1
         }
         console.log(background1);
-        const newNote = await fetch("http://localhost:5000/api/notes/addnotes",
+        const newNote = await fetch("https://node-test-h2n4.onrender.com/api/notes/addnotes",
         {
             method:"POST",
             headers:{
@@ -87,7 +87,7 @@ const deleteNotes = async(noteId)=>{
             tag:tag1,
             background:background1
         }
-        const newNote = await fetch(`http://localhost:5000/api/notes/updatenotes/${noteId}`,
+        const newNote = await fetch(`https://node-test-h2n4.onrender.com/api/notes/updatenotes/${noteId}`,
         {
             method:"PUT",
             headers:{
@@ -109,7 +109,7 @@ const deleteNotes = async(noteId)=>{
             email:uemail,
             password:upassword
         }
-        const newUser = await fetch(`http://localhost:5000/api/auth/create`,
+        const newUser = await fetch(`https://node-test-h2n4.onrender.com/api/auth/create`,
        {
         method:"POST",
         headers:{
@@ -135,7 +135,7 @@ const deleteNotes = async(noteId)=>{
         }
         
 
-    const newUser = await fetch("http://localhost:5000/api/auth/ulogin",
+    const newUser = await fetch("https://node-test-h2n4.onrender.com/api/auth/ulogin",
        {
         method:"POST",
         headers:{
@@ -156,7 +156,7 @@ const deleteNotes = async(noteId)=>{
 //Worker AuthContext 
 
       const GetUser=async()=>{
-        const newUser = await fetch("http://localhost:5000/api/auth/getuser",
+        const newUser = await fetch("https://node-test-h2n4.onrender.com/api/auth/getuser",
        {
         method:"POST",
         headers:{
