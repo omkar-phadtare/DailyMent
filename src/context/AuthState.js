@@ -54,7 +54,7 @@ const deleteNotes = async(noteId)=>{
 }
 
 
-//ADD NEW NOTES 
+//ADD NEW NOTES
     const addNotes=async(title1,description1,tag1,background1)=>{
 
         const detail = {
